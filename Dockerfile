@@ -1,7 +1,7 @@
 FROM debian:buster-slim
 COPY setup/ /tmp
 RUN echo "deb http://deb.debian.org/debian buster-backports main" | tee /etc/apt/sources.list.d/backports.list &&
-  apt update &&
+  apt-get update &&
   apt-get install -y \
     linux-headers-"$(uname -r)" \
     wireguard \
