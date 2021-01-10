@@ -5,4 +5,5 @@ EXPOSE 51820/udp 9091
 VOLUME /etc/wireguard /data
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
+RUN apt install iproute2
 CMD ["/entrypoint.sh"]
